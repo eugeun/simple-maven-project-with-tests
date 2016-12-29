@@ -27,7 +27,7 @@ node {
         myCustomDataMap["jenkins_data"] = myBuildInfo
 
         step([$class: 'InfluxDbPublisher',
-              target: 'http://influxdb:8086,jenkinsdb',
+              target: 'http://ecsc003001d6:8086,jenkinsdb',
               customDataMap: myCustomDataMap])
     }
 }
