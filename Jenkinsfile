@@ -1,3 +1,11 @@
+def s = "'   A   B   ''"
+echo "=" + strip(strip(s, "'"), " ") + "="
+echo "-" + s + "-"
+
+def strip(s, c) {
+    return s.replaceAll("^${c}+", "").replaceAll("${c}+\$", "")
+}
+
 node {
     stage('scm') {
         checkout scm
