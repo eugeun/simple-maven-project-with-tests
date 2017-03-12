@@ -11,6 +11,9 @@
             <url>http://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+    <scm>
+      <developerConnection>scm:git:ssh://git@github.com/eugeun/simple-maven-project-with-tests.git</developerConnection>
+    </scm>
     <build>
         <plugins>
             <plugin>
