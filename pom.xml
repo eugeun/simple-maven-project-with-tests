@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>test</groupId>
     <artifactId>simple-maven-project-with-tests</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     <licenses>
         <license>
@@ -27,9 +27,9 @@
               <artifactId>maven-release-plugin</artifactId>
               <version>2.3.2</version>
               <configuration>
-                <prepartionGoals>clean</prepartionGoals>
+                <preparationGoals>clean</preparationGoals>
                 <autoVersionSubmodules>true</autoVersionSubmodules>
-                <tagNameFormat>v${project.version}</tagNameFormat>
+                <tagNameFormat>v@{project.version}</tagNameFormat>
               </configuration>
             </plugin>
         </plugins>
