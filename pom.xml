@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>test</groupId>
     <artifactId>simple-maven-project-with-tests</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <licenses>
         <license>
@@ -13,13 +13,24 @@
     </licenses>
     <scm>
       <developerConnection>scm:git:ssh://git@github.com/eugeun/simple-maven-project-with-tests.git</developerConnection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
+            </plugin>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-release-plugin</artifactId>
+              <version>2.3.2</version>
+              <configuration>
+                <prepartionGoals>clean</prepartionGoals>
+                <autoVersionSubmodules>true</autoVersionSubmodules>
+                <tagNameFormat>v${project.version}</tagNameFormat>
+              </configuration>
             </plugin>
         </plugins>
     </build>
